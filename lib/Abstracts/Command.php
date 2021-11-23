@@ -8,7 +8,7 @@
  * @package Underpin\Abstracts
  */
 
-namespace Underpin_Commands\Abstracts;
+namespace Underpin\Commands\Abstracts;
 
 use Underpin\Traits\Feature_Extension;
 use WP_Error;
@@ -35,9 +35,11 @@ abstract class Command {
 
 		if ( defined( 'WP_CLI' ) && WP_CLI ) {
 			if ( ! empty( $this->command_description ) ) {
+				/** @noinspection PhpUndefinedClassInspection */
 				\WP_CLI::add_command( $this->command, $this, $this->command_description );
 
 			} else {
+				/** @noinspection PhpUndefinedClassInspection */
 				\WP_CLI::add_command( $this->command, $this );
 			}
 		}

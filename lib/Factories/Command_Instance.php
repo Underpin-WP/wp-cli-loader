@@ -7,11 +7,11 @@
  */
 
 
-namespace Underpin_Commands\Factories;
+namespace Underpin\Commands\Factories;
 
 
 use Underpin\Traits\Instance_Setter;
-use Underpin_Commands\Abstracts\Command;
+use Underpin\Commands\Abstracts\Command;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
