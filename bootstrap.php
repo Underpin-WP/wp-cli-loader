@@ -9,6 +9,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Add this loader.
 Underpin::attach( 'setup', new \Underpin\Factories\Observers\Loader( 'cli', [
-	'instance' => 'Underpin\Commands\Abstracts\Command',
-	'default'  => 'Underpin\Commands\Factories\Command_Instance',
+	'abstraction_class' => 'Underpin\Commands\Abstracts\Command',
+	'default_factory'   => 'Underpin\Commands\Factories\Command_Instance',
 ] ) );
